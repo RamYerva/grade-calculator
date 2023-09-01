@@ -1,0 +1,49 @@
+package gradecalculator;
+
+public class GradeCalculator {
+	public static void main(String[] args) {
+		java.util.Scanner sc=new java.util.Scanner(System.in);
+		
+		System.out.println("Enter the no,of subjects");
+		int subjects=sc.nextInt();
+		
+		int total=0;
+		for(int i=1;i<=subjects;i++) {
+			System.out.println("Enter the marks obtained in subject "+i);
+			
+			int marks=sc.nextInt();
+			total=total+marks;
+			System.out.println("Total marks: "+total);
+		}
+		double average;
+		average= (total)/subjects;
+		System.out.println("Average Percentage: "+average+"%");
+		
+		
+		
+		if(average>=90) {
+			System.out.println("Grade A");
+		}
+		else if(average>=80 && average<90) {
+			System.out.println("Grade B");
+		}
+		else if(average>=70 && average<80) {
+			System.out.println("Grade C");
+		}
+		else if(average>=60 && average<70) {
+			System.out.println("Grade D");
+		}
+		else if(average>=40 && average<60) {
+			System.out.println("Grade E");
+		}
+		else if(average>=0 && average<40) {
+			System.out.println("Grade Fail");
+		}
+		else {
+			System.out.println("Didnt Attend Exam");
+		}
+		sc.close();
+		
+	}
+
+}
